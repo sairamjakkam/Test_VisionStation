@@ -34,5 +34,5 @@ import { pageFixture } from "../../hooks/pageFixture";
     }
 }
 
-const abc = new EncounterCasesPage();
-export default abc;
+const encountercasespage = new EncounterCasesPage();
+export default encountercasespage;

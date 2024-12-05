@@ -1,7 +1,7 @@
 import {Given, When, Then, setDefaultTimeout} from "@cucumber/cucumber"
 import {expect} from "@playwright/test";
 import { pageFixture } from "../../hooks/pageFixture";
-import  abc from "../pages/encounterCasesPage";
+import  encountercasespage from "../pages/encounterCasesPage";
 
 //let encounterCasesPage: EncounterCasesPage;
 
@@ -22,10 +22,10 @@ setDefaultTimeout(60 * 1000);
     Then('I enter patient name in searchBox as {string} and selects some options in {string} dropdown', async function (patientName, roomName) {
         //accessing dropdown
         
-        expect(abc.pageHeadingLocator()).toHaveText("Cases");
-        expect(abc.searchBoxLocator()).toBeEditable();
-        await abc.clickSelectRoomDropdown();
+        expect(encountercasespage.pageHeadingLocator()).toHaveText("Cases");
+        expect(encountercasespage.searchBoxLocator()).toBeEditable();
+        await encountercasespage.clickSelectRoomDropdown();
         await pageFixture.page.waitForTimeout(1000)
-        await abc.selectDropdownOptionWithValue('OR 2');
-        await abc.selectDropdownOptionWithValue('OR 4');
+        await encountercasespage.selectDropdownOptionWithValue('OR 2');
+        await encountercasespage.selectDropdownOptionWithValue('OR 4');
     });

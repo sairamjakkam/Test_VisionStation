@@ -27,6 +27,11 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
+    timeout: 60000, // 60 seconds
+
+    /* Set timeout for navigation actions */
+    navigationTimeout: 60000, // 60 seconds
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
