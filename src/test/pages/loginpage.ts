@@ -5,13 +5,15 @@ class LoginPage {
 
     private Elements = {
 
-        logintext_loc        : '//h5[normalize-space()="Login"]',
-        userfield_loc        : '//input[@placeholder="username"]',
-        Passfield_loc        : '//input[@placeholder="password"]',
-        button_loc           : '//button[normalize-space()="Login"]',
-        invalidmsg_loc       : '//p[@class="oxd-text oxd-text--p oxd-alert-content-text"]',
-        withoutcred_loc      : '//div[@class="orangehrm-login-slot-wrapper"]//div[1]//div[1]//span[1]',
-        dashboardtext_loc    : '//h6[normalize-space()="Dashboard"]'
+        logintext_loc: '//h5[normalize-space()="Login"]',
+        userfield_loc: '//input[@placeholder="Username"]',
+        Passfield_loc: '//input[@placeholder="Password"]',
+        button_loc: '//button[normalize-space()="Login"]',
+        invalidmsg_loc: '//p[@class="oxd-text oxd-text--p oxd-alert-content-text"]',
+        withoutcred_loc: '//div[@class="orangehrm-login-slot-wrapper"]//div[1]//div[1]//span[1]',
+        dashboardtext_loc: '//h6[normalize-space()="Dashboard"]',
+        profileicon_loc: '//img[@class="oxd-userdropdown-img"]',
+        logout_loc: '//a[@href="/web/index.php/auth/logout"]'
 
     }
 
@@ -49,6 +51,16 @@ class LoginPage {
 
     dashboardTextLocater() {
         return pageFixture.page.locator(this.Elements.dashboardtext_loc);
+    }
+
+    profileIconLocater() {
+
+        return pageFixture.page.locator(this.Elements.profileicon_loc);
+    }
+
+    logoutLocater() {
+        return pageFixture.page.locator(this.Elements.logout_loc)
+
     }
 
 

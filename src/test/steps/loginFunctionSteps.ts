@@ -43,7 +43,7 @@ When('i enter invalid credentials username as {string} and password as {string}'
     }
 );
 
-When('clicks the login button', async function () {
+When('click on the login button', async function () {
 
     await loginpage.buttonLoginLocater().click();
     await pageFixture.page.waitForTimeout(6000);
@@ -56,7 +56,7 @@ Then('an error message should be displayed', async function () {
 
 });
 
-When('i clicks the login button without entering credentials', async function () {
+When('i click on the login button without entering credentials', async function () {
 
     await loginpage.buttonLoginLocater().click();
 
@@ -81,4 +81,25 @@ Then('i should be redirected to the dashboard', async function () {
     expect(loginpage.dashboardTextLocater().isVisible());
 
 });
+
+Then('i should be able to see the profile icon on the home page', async function () {
+
+    expect(loginpage.profileIconLocater().isVisible());
+
+})
+
+Then('click on the logout button', async function () {
+
+    await loginpage.profileIconLocater().click();
+    await loginpage.logoutLocater().click();
+
+
+})
+
+Then('i need to validate to login page', async function () {
+
+
+    expect(loginpage.loginTextLocater().isVisible());
+
+})
 
