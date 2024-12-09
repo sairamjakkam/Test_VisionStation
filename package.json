@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env ENV=QA cucumber-js  --config=config/cucumber.js || true"
+   
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/node": "^20.14.11",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
+    "multiple-cucumber-html-reporter": "^3.8.0",
     "ts-node": "^10.9.2"
   }
 }

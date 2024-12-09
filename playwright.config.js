@@ -31,6 +31,7 @@ module.exports = defineConfig({
 
     /* Set timeout for navigation actions */
     navigationTimeout: 60000, // 60 seconds
+    headless:true,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

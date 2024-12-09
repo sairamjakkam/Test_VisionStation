@@ -34,7 +34,7 @@ Then('the login button should be visible', async function () {
 
 });
 
-When('i enter invalid credentials username as {string} and password as {string}',
+When('I enter invalid credentials username as {string} and password as {string}',
     async function (user: string, password: string) {
         await loginpage.userFiledLocater(user);
         await loginpage.passwordFieldLocater(password);
@@ -56,13 +56,13 @@ Then('an error message should be displayed', async function () {
 
 });
 
-When('i click on the login button without entering credentials', async function () {
+When('I click on the login button without entering credentials', async function () {
 
     await loginpage.buttonLoginLocater().click();
 
 });
 
-When('i enter valid credentials username as {string} and password as {string}',
+When('I enter valid credentials username as {string} and password as {string}',
     async function (user: string, password: string) {
         await loginpage.userFiledLocater(user);
         await loginpage.passwordFieldLocater(password);
@@ -76,13 +76,13 @@ Then('a validation error should be displayed', async function () {
 });
 
 
-Then('i should be redirected to the dashboard', async function () {
+Then('I should be redirected to the dashboard', async function () {
 
     expect(loginpage.dashboardTextLocater().isVisible());
 
 });
 
-Then('i should be able to see the profile icon on the home page', async function () {
+Then('I should be able to see the profile icon on the home page', async function () {
 
     expect(loginpage.profileIconLocater().isVisible());
 
@@ -96,7 +96,7 @@ Then('click on the logout button', async function () {
 
 })
 
-Then('i need to validate to login page', async function () {
+Then('I should be navigated to login page', async function () {
 
 
     expect(loginpage.loginTextLocater().isVisible());
